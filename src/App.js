@@ -10,11 +10,11 @@ const App = () => {
   const [timer, setTimer] = useState(null);
 
   const startTimer = () => {
-    setTimer(
+    if(!timer) { setTimer(
       setInterval(() => {
         setTime((currentTime) => currentTime + 1);
       }, 1)
-    );
+    );}
   };
 
   const stopTimer = () => {
